@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    <span>Edição de Produto</span>
+                    <span>Entrada de Produto</span>
                     <a href="/products">
                         Produtos
                     </a>
@@ -37,7 +37,7 @@
                     <div class="row">
                         <div class="col">
                             <label>Estoque:</label>
-                            <input type="number" name="instock" class="form-control" value="{{$product->instock}}">
+                            <input type="number" name="instock" class="form-control" value="{{$product->instock}}" readonly>
                         </div>
                         <div class="col">
                             <label>Estoque Mínimo:</label>
