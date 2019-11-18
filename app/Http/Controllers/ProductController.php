@@ -16,7 +16,7 @@ class ProductController extends Controller
     {
         // return product::all();
         $products = Product::all();
-        return view('products.index', compact('products'));
+        return view('products.products', compact('products'));
     }
 
     /**
@@ -84,7 +84,7 @@ class ProductController extends Controller
         $product->instock = $request->instock;
         $product->minimumstock = $request->minimumstock;
         $product->save();
-        return redirect("/");
+        return redirect("/products");
     }
 
     /**
@@ -96,6 +96,6 @@ class ProductController extends Controller
     public function destroy(Product $product)
     {
         product::destroy($product->id);
-        return redirect("/");
+        return redirect("/products");
     }
 }
